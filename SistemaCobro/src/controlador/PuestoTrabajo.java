@@ -8,6 +8,9 @@ public class PuestoTrabajo {
     private String codigoPuesTra, nombrePuesTra, descripcion;
     
     public PuestoTrabajo(){
+        codigoPuesTra = "";
+        nombrePuesTra = "";
+        descripcion = "";
     
     }
     public void registrarPuestoT(String codigopuestoTra, String nombrePuesTra, String descripcion){

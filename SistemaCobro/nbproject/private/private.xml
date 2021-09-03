@@ -3,23 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/IngresarSistema.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/CrearEmpleado.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/CrearDepartamento.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/CrearPaciente.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/ListarPuestoTrabajo.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/ListarEmpleado.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/Sistema.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/CRUD.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/Departamento.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/Entidad.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/Paciente.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/PuestoTrabajo.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/ListarDepartamentos.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/CrearPuestoTrabajo.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/Empleado.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/controlador/SistemaMain.java</file>
-            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/JavaApplication1/src/vista/ListarPacientes.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/CRUDepartamento.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/CRUPuestoTrabajo.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/ListarServicio.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/IngresarSistema.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/RealizarFactura.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/CRUEmpleado.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/CRUMedicamento.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/ListarFactura.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/controlador/CRUD.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/CRUPaciente.java</file>
+            <file>file:/C:/Users/PC%20MASTER/Desktop/Mi%20semestre/Metodollogia%20DS/Software/SistemaCobro/src/vista/CRUServicio.java</file>
         </group>
     </open-files>
 </project-private>

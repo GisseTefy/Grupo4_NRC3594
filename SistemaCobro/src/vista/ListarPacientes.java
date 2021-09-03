@@ -1,16 +1,50 @@
 package vista;
+
+import configuracionTablas.GestionCeldas;
+import configuracionTablas.GestionEncabezadoTabla;
 import controlador.CRUD;
+import controlador.ColorearFilas;
+import controlador.Paciente;
 import java.awt.event.KeyEvent;
+import javax.swing.table.JTableHeader;
 
 public class ListarPacientes extends javax.swing.JFrame {
+
     CRUD crud = new CRUD();
 
     public ListarPacientes() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        crud.listarPaciente(jTableListado);
-        
+        crud.listarPaciente(jTableListado, null);
+        estiloTabla();
+    }
+
+    public void estiloTabla() {
+        jTableListado.getColumnModel().getColumn(0).setCellRenderer(new GestionCeldas("numerico"));
+        jTableListado.getColumnModel().getColumn(1).setCellRenderer(new GestionCeldas("texto"));
+        jTableListado.getColumnModel().getColumn(2).setCellRenderer(new GestionCeldas("texto"));
+        jTableListado.getColumnModel().getColumn(3).setCellRenderer(new GestionCeldas("texto"));
+        jTableListado.getColumnModel().getColumn(4).setCellRenderer(new GestionCeldas("texto"));
+        jTableListado.getColumnModel().getColumn(5).setCellRenderer(new GestionCeldas("Buscar"));
+        jTableListado.getColumnModel().getColumn(6).setCellRenderer(new GestionCeldas("Actualizar"));
+        jTableListado.getColumnModel().getColumn(7).setCellRenderer(new GestionCeldas("Eliminar"));
+
+        jTableListado.getTableHeader().setReorderingAllowed(false);
+        jTableListado.setRowHeight(30);
+
+        jTableListado.getColumnModel().getColumn(0).setPreferredWidth(100);
+        jTableListado.getColumnModel().getColumn(1).setPreferredWidth(170);
+        jTableListado.getColumnModel().getColumn(2).setPreferredWidth(170);
+        jTableListado.getColumnModel().getColumn(3).setPreferredWidth(170);
+        jTableListado.getColumnModel().getColumn(4).setPreferredWidth(170);
+        jTableListado.getColumnModel().getColumn(5).setPreferredWidth(30);
+        jTableListado.getColumnModel().getColumn(6).setPreferredWidth(30);
+        jTableListado.getColumnModel().getColumn(7).setPreferredWidth(30);
+
+        JTableHeader encabezado = jTableListado.getTableHeader();
+        encabezado.setDefaultRenderer(new GestionEncabezadoTabla());
+        jTableListado.setTableHeader(encabezado);
     }
 
     /**
@@ -22,31 +56,80 @@ public class ListarPacientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jTextFieldBusqueda = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jButtonBuscar = new javax.swing.JButton();
+        jTextFieldBusqueda = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane = new javax.swing.JScrollPane();
         jTableListado = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(246, 245, 245));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel5.setForeground(new java.awt.Color(0, 153, 204));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel4.add(jTextFieldBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 360, 20));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 110, 34));
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("LISTADO DE PACIENTES");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 240, 20));
+
+        jButtonBuscar.setBackground(new java.awt.Color(204, 204, 204));
+        jButtonBuscar.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jPanel4.add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 90, -1));
+        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButtonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, 150, 40));
+
+        jTextFieldBusqueda.setBackground(new java.awt.Color(0, 153, 204));
+        jTextFieldBusqueda.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jTextFieldBusqueda.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBusqueda.setBorder(null);
+        jPanel5.add(jTextFieldBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 290, 30));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Buscar:");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/Line_Blanca.png"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 290, -1));
+
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 460));
+
+        jPanel6.setBackground(new java.awt.Color(246, 245, 245));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jScrollPane.setBackground(new java.awt.Color(255, 255, 255));
 
+        jTableListado = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex, int colIndex){
+                return false;
+            }
+        };
         jTableListado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"", null, null, null},
@@ -57,13 +140,33 @@ public class ListarPacientes extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTableListado.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_NEXT_COLUMN);
+        jTableListado.getTableHeader().setResizingAllowed(false);
+        jTableListado.getTableHeader().setReorderingAllowed(false);
+        jTableListado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTableListadoMousePressed(evt);
+            }
+        });
         jScrollPane.setViewportView(jTableListado);
 
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 51, 51));
+        jButton2.setText("Registrar Paciente");
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(65, 65, 65), 3));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -74,63 +177,101 @@ public class ListarPacientes extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE))
+                    .addComponent(jScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 530, 310));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/csr3.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel4)))
+                .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 310, Short.MAX_VALUE)
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 20, 310));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 20, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 530, 20));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 710, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible(false); 
+        this.setVisible(false);
         Sistema sistema = new Sistema();
         sistema.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-    
+
+    private void jTableListadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableListadoMousePressed
+        //Evento Mouse
+        int fila = jTableListado.getSelectedRow();
+        int columnas = jTableListado.getSelectedColumn();
+        int numCol = jTableListado.getColumnCount();
+        if (columnas == 0 || columnas == numCol - 3) {
+            CRUPaciente cRUPaciente = new CRUPaciente();
+            this.setVisible(false);
+            cRUPaciente.mostrarDatosE(crud.buscarPaciente(new Paciente(), "PAC_CODIGO", jTableListado.getValueAt(fila, 0).toString()));
+            cRUPaciente.setVisible(true);
+        } else if (columnas == numCol - 2) {
+            CRUPaciente cRUPaciente = new CRUPaciente();
+            this.setVisible(false);
+            cRUPaciente.actualizarDatosE(crud.buscarPaciente(new Paciente(), "PAC_CODIGO", jTableListado.getValueAt(fila, 0).toString()));
+            cRUPaciente.setVisible(true);
+
+        } else if (columnas == numCol - 1) {
+            System.out.println("CCodigo: "+jTableListado.getValueAt(fila, 0).toString());
+            boolean bion = crud.eliminarDato("paciente", "PAC_CODIGO",jTableListado.getValueAt(fila, 0).toString());
+            System.out.println("El : "+bion);
+            Mensaje mensaje = new Mensaje();
+            mensaje.setExito(true);
+            mensaje.redicListadoPAC();
+            mensaje.interExito();
+            mensaje.mostrarM("Dato eliminado", "El dato ha sido eliminado");
+            this.setVisible(false);
+        } else {
+        }
+    }//GEN-LAST:event_jTableListadoMousePressed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.setVisible(false);
+        CRUPaciente cRUPaciente = new CRUPaciente();
+        cRUPaciente.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
+        // Boton Buscar
+        String dato = jTextFieldBusqueda.getText();
+        crud.listarPaciente(jTableListado, dato);
+        estiloTabla();
+    }//GEN-LAST:event_jButtonBuscarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,11 +316,15 @@ public class ListarPacientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonBuscar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JTable jTableListado;
     private javax.swing.JTextField jTextFieldBusqueda;

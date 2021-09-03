@@ -1,32 +1,10 @@
 package vista;
 
 public class Sistema extends javax.swing.JFrame {
-      private CrearEmpleado registrarEmpleado = new CrearEmpleado();
-      private ListarEmpleado listarEmpleado = new ListarEmpleado();
-      private CrearPaciente registrarPaciente = new CrearPaciente();
-      private ListarPacientes listarPacientes = new ListarPacientes();
-      private CrearDepartamento crearDepartamento = new CrearDepartamento();
-      private ListarDepartamentos listarDepartamentos = new ListarDepartamentos();
-      private CrearPuestoTrabajo crearPuestoTrab = new CrearPuestoTrabajo();
-      private ListarPuestoTrabajo listarPuestoTrabajo = new ListarPuestoTrabajo();
-    
-    private boolean menuEmpleado = false;
-    private boolean menuPaciente = false;
-    private boolean menuInstalaciones = false;
-    
     public Sistema() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        
-        menuEmpleado = true;
-        menuPaciente = false;
-        menuInstalaciones = false;
-        
-        jButtonCrearUno.setText("Registrar Nuevo Empleado");
-        jButtonListarUno.setText("Listar Empleados");
-        jButtonCrearDos.setEnabled(false);
-        jButtonListarDos.setEnabled(false);
     }
 
     /**
@@ -38,230 +16,162 @@ public class Sistema extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jLabel15 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jButtonEmpleado = new javax.swing.JButton();
         jButtonPaciente = new javax.swing.JButton();
-        jButtonInstalaciones = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jButtonCrearUno = new javax.swing.JButton();
-        jButtonListarUno = new javax.swing.JButton();
-        jButtonCrearDos = new javax.swing.JButton();
-        jButtonListarDos = new javax.swing.JButton();
+        jButtonServicios = new javax.swing.JButton();
+        jButtonEmpleado = new javax.swing.JButton();
+        jButtonPuestoT = new javax.swing.JButton();
+        jButtonMedicamento = new javax.swing.JButton();
+        jButtonDepartamento = new javax.swing.JButton();
+        jButtonFactura = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+
+        jRadioButton1.setText("jRadioButton1");
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel15.setText("Departamentos");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jButtonEmpleado.setText("Gestionar Empleado");
-        jButtonEmpleado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEmpleadoActionPerformed(evt);
-            }
-        });
-
+        jButtonPaciente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImGestPac.png"))); // NOI18N
         jButtonPaciente.setText("Gestionar Paciente");
+        jButtonPaciente.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 94, 39), new java.awt.Color(255, 95, 39), new java.awt.Color(255, 94, 39), new java.awt.Color(255, 94, 39)));
         jButtonPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPacienteActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonPaciente, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 230, 110));
 
-        jButtonInstalaciones.setText("Gestion Instalaciones");
-        jButtonInstalaciones.addActionListener(new java.awt.event.ActionListener() {
+        jButtonServicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImGestSer.png"))); // NOI18N
+        jButtonServicios.setText("Gestion Instalaciones");
+        jButtonServicios.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 146, 204), new java.awt.Color(0, 146, 204), new java.awt.Color(0, 146, 204), new java.awt.Color(0, 146, 204)));
+        jButtonServicios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonInstalacionesActionPerformed(evt);
+                jButtonServiciosActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonServicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 230, 120));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButtonPaciente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButtonInstalaciones, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jButtonEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonInstalaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 208, Short.MAX_VALUE))
-        );
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jButtonCrearUno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEmpleado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImgGestEmp.png"))); // NOI18N
+        jButtonEmpleado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        jButtonEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCrearUnoActionPerformed(evt);
+                jButtonEmpleadoActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 170));
 
-        jButtonListarUno.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPuestoT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImgGestPuestT.png"))); // NOI18N
+        jButtonPuestoT.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        jButtonPuestoT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonListarUnoActionPerformed(evt);
+                jButtonPuestoTActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonPuestoT, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 180, 180));
 
-        jButtonCrearDos.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMedicamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImgGestMed.png"))); // NOI18N
+        jButtonMedicamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCrearDosActionPerformed(evt);
+                jButtonMedicamentoActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 180, 170));
 
-        jButtonListarDos.addActionListener(new java.awt.event.ActionListener() {
+        jButtonDepartamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImgGestDep.png"))); // NOI18N
+        jButtonDepartamento.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        jButtonDepartamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonListarDosActionPerformed(evt);
+                jButtonDepartamentoActionPerformed(evt);
             }
         });
+        jPanel1.add(jButtonDepartamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 180, 180));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButtonCrearDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonCrearUno, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonListarUno, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                    .addComponent(jButtonListarDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButtonListarUno, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                    .addComponent(jButtonCrearUno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonCrearDos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonListarDos, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jButtonFactura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/ImgGenFac.png"))); // NOI18N
+        jButtonFactura.setText("Gestionar Empleado");
+        jButtonFactura.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 178, 98), new java.awt.Color(0, 178, 98), new java.awt.Color(0, 178, 98), new java.awt.Color(0, 178, 98)));
+        jButtonFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFacturaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 230, 110));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursosImg/FontoInf.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 390));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonInstalacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInstalacionesActionPerformed
-        menuEmpleado = false;
-        menuPaciente = false;
-        menuInstalaciones = true;
-        
-        jButtonCrearDos.setEnabled(true);
-        jButtonListarDos.setEnabled(true);
-        
-        jButtonCrearUno.setText("Registrar Departamento");
-        jButtonListarUno.setText("Listar Departamento");
-        jButtonCrearDos.setText("Registrar Puesto de Trabajo");
-        jButtonListarDos.setText("Listar Puesto de Trabajo");
-    }//GEN-LAST:event_jButtonInstalacionesActionPerformed
+    private void jButtonServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonServiciosActionPerformed
+        this.setVisible(false);
+        ListarServicio listarServicio = new ListarServicio();
+        listarServicio.listarSER();
+        listarServicio.setVisible(true);
+    }//GEN-LAST:event_jButtonServiciosActionPerformed
 
-    private void jButtonCrearDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearDosActionPerformed
-        this.setVisible(false); 
-        crearPuestoTrab.setVisible(true);
-    }//GEN-LAST:event_jButtonCrearDosActionPerformed
+    private void jButtonMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMedicamentoActionPerformed
+        this.setVisible(false);        
+        ListarMedicamento listarMedicamento = new ListarMedicamento();
+        listarMedicamento.setVisible(true);
+    }//GEN-LAST:event_jButtonMedicamentoActionPerformed
 
-    private void jButtonEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmpleadoActionPerformed
-        menuEmpleado = true;
-        menuPaciente = false;
-        menuInstalaciones = false;
-        
-        jButtonCrearUno.setText("Registrar Nuevo Empleado");
-        jButtonListarUno.setText("Listar Empleados");
-        jButtonCrearDos.setEnabled(false);
-        jButtonListarDos.setEnabled(false);
-    }//GEN-LAST:event_jButtonEmpleadoActionPerformed
+    private void jButtonFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFacturaActionPerformed
+        this.setVisible(false);
+        ListarServicio listarServicio = new ListarServicio();
+        listarServicio.listarSERFAC();
+        listarServicio.setVisible(true);
+    }//GEN-LAST:event_jButtonFacturaActionPerformed
 
     private void jButtonPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPacienteActionPerformed
-        menuEmpleado = false;
-        menuPaciente = true;
-        menuInstalaciones = false;
-        
-        jButtonCrearUno.setText("Registrar Nuevo Paciente");
-        jButtonListarUno.setText("Listar Paciente");
-        jButtonCrearDos.setEnabled(false);
-        jButtonListarDos.setEnabled(false);
+        this.setVisible(false);
+        ListarPacientes listarPacientes = new ListarPacientes();
+        listarPacientes.setVisible(true);
     }//GEN-LAST:event_jButtonPacienteActionPerformed
 
-    private void jButtonCrearUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearUnoActionPerformed
-        if(menuEmpleado == true){
-            this.setVisible(false);
-            registrarEmpleado.setVisible(true);
-        }else if(menuPaciente == true){
-            this.setVisible(false);
-            registrarPaciente.setVisible(true);
-        }else if(menuInstalaciones == true){
-            this.setVisible(false);
-            crearDepartamento.setVisible(true);
-        }
-    }//GEN-LAST:event_jButtonCrearUnoActionPerformed
+    private void jButtonDepartamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDepartamentoActionPerformed
+        
+        this.setVisible(false);
+        ListarDepartamentos listarDepartamentos = new ListarDepartamentos();
+        listarDepartamentos.setVisible(true);
+    }//GEN-LAST:event_jButtonDepartamentoActionPerformed
 
-    private void jButtonListarUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarUnoActionPerformed
-        if(menuEmpleado == true){
-            this.setVisible(false); //******
-            listarEmpleado.setVisible(true);
-        }else if(menuPaciente == true){
-            this.setVisible(false);
-            listarPacientes.setVisible(true);
-        }else if(menuInstalaciones == true){
-            this.setVisible(false);
-            listarDepartamentos.setVisible(true);
-        }
-    }//GEN-LAST:event_jButtonListarUnoActionPerformed
+    private void jButtonPuestoTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPuestoTActionPerformed
+        this.setVisible(false);        
+        ListarPuestoTrabajo listarPuestoT = new ListarPuestoTrabajo();
+        listarPuestoT.setVisible(true);
+    }//GEN-LAST:event_jButtonPuestoTActionPerformed
 
-    private void jButtonListarDosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListarDosActionPerformed
-        this.setVisible(false); 
-        listarPuestoTrabajo.setVisible(true);
-    }//GEN-LAST:event_jButtonListarDosActionPerformed
+    private void jButtonEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEmpleadoActionPerformed
+        this.setVisible(false);
+        ListarEmpleado listarEmpleado = new ListarEmpleado();
+        listarEmpleado.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonEmpleadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -299,15 +209,17 @@ public class Sistema extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCrearDos;
-    private javax.swing.JButton jButtonCrearUno;
+    private javax.swing.JButton jButtonDepartamento;
     private javax.swing.JButton jButtonEmpleado;
-    private javax.swing.JButton jButtonInstalaciones;
-    private javax.swing.JButton jButtonListarDos;
-    private javax.swing.JButton jButtonListarUno;
+    private javax.swing.JButton jButtonFactura;
+    private javax.swing.JButton jButtonMedicamento;
     private javax.swing.JButton jButtonPaciente;
+    private javax.swing.JButton jButtonPuestoT;
+    private javax.swing.JButton jButtonServicios;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton1;
     // End of variables declaration//GEN-END:variables
 }
